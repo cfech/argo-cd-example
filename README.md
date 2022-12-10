@@ -32,8 +32,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 4. Create your app in argo by applying an app yaml
 
-```
+**make sure your repo is public or will have to configure your credentials**
 
+```
+ubectl apply -n argocd -f ./argo_templates/app.yaml
 ```
 
 or via cli
