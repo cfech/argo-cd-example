@@ -35,7 +35,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 **make sure your repo is public or will have to configure your credentials**
 
 ```
-ubectl apply -n argocd -f ./argo_templates/app.yaml
+kubectl apply -n argocd -f ./argo_templates/app.yaml
 ```
 
 or via cli
@@ -46,6 +46,13 @@ argocd app create --name example \
 --dest-server https://kubernetes.default.svc \
 --dest-namespace default --path example_project/manifest
 ```
+
+- Should create the app and the resources and sync with the git repo, can see this on the argocd gui
+
+![argocd](./argocdgui.png)
+
+## Updating App and keeping in sync ##
+- once configured argocd should monitor the git repo for updates and sync when necessary
 
 
 ## Kubernetes Commands ##

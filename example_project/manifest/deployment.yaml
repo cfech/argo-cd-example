@@ -7,6 +7,10 @@ spec:
   selector:
     matchLabels:
       myApp: argo-example
+  strategy:
+    type: RollingUpdate
+    maxSurge: 1
+    maxUnavailable: 0
   template:
     metadata:
       labels:
@@ -14,7 +18,8 @@ spec:
     spec:
       containers:
         - name: argo-example-node-app
-          image: cfech/argo_example:1
+          image: cfech/argo_example:2
+          imagePullPolicy: Always
           ports:
             - name: http
               containerPort: 8080
