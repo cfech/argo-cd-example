@@ -54,6 +54,8 @@ argocd app create --name example \
 ## Updating App and keeping in sync ##
 - once configured argocd should monitor the git repo for updates and sync when necessary
 
+- push update and argo should pick it up and sync it to your cluster
+
 
 ## Kubernetes Commands ##
 - see contexts
