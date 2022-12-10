@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: example-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://gitlab.com/cfech44/argo-cd-examples.git
+    targetRevision: HEAD
+    path: example_project/manifest
+    directory: # apply all the files in the directory
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  #tells argo you want to listen for changes on the git repo path
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false

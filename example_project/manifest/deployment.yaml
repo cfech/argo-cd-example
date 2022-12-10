@@ -14,7 +14,12 @@ spec:
     spec:
       containers:
         - name: argo-example-node-app
-          image: cfech/argo-example
+          image: cfech/argo_example:0
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+
 
 #^bare minimum needed 
 
