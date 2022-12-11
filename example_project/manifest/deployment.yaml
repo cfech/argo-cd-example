@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: argo-example-node-app
-          image: cfech/argo_example:0
+          image: cfech/argo_example:1
           imagePullPolicy: Always
           ports:
             - name: http

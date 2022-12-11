@@ -57,6 +57,16 @@ argocd app create --name example \
 - push update and argo should pick it up and sync it to your cluster
 
 
+## Authentication with Private Repo ##
+https://argo-cd.readthedocs.io/en/release-1.8/user-guide/private-repositories/
+
+could use gui or cli 
+
+```
+argocd repo add [repolink] --username <username> --password <password>
+```
+
+
 ## Kubernetes Commands ##
 - see contexts
 ```
