@@ -1,5 +1,7 @@
 #! /bin/zsh
 
+# make sure your docker desktop cluster (or other) is working (kind will not work)
+
 echo " switching contexts "
 
 docker login
