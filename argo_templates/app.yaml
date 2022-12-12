@@ -17,5 +17,5 @@ spec:
   #tells argo you want to listen for changes on the git repo path
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
